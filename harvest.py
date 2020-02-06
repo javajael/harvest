@@ -1,7 +1,7 @@
 ############
 # Part 1   #
 ############
-
+import sys
 
 class MelonType(object):
     """A species of melon at a melon farm."""
@@ -154,4 +154,13 @@ def is_sellable(melon):
     loc = int(melon.harvest_location)
     if rating > 5 and color > 5 and loc != 3:
         sellable = True
-    return sellable
+
+
+def open_harvest_log(log_file):
+    with open(log_file) as f:
+        for line in f:
+            line = line.rstrip()
+
+
+open_harvest_log('harvest_log.txt')
+
