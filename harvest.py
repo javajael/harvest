@@ -93,7 +93,10 @@ class Melon(object):
 
     # Fill in the rest
     # Needs __init__ and is_sellable methods
-    def __init__(self, melon_type, shape_rating, color_rating, harvest_location, harvested_by)
+    def __init__(self, melon_type, shape_rating, color_rating, harvest_location, harvested_by):
+        # need to instantiate melon_type - 
+        # using a call to the make_melon_type_lookup dictionary 
+        # and passing it  the melon code as a key
         self.melon_type = Melon_Type()
         self.shape_rating = shape_rating
         self.color_rating = color_rating
